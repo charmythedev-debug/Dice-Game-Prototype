@@ -34,7 +34,7 @@ class GameManager:
         self.enemy.sprite_path = "img/characters/punkin 1.png"
         self.player.sprite_path = "img/character png.png"
         self.background_sprite = pygame.image.load("img/maps/shifty town 1.png").convert()
-        self.combat_background = pygame.image.load(self.combat_backgrounds["punkin"]).convert()
+        # self.combat_background = pygame.image.load(self.combat_backgrounds["punkin"]).convert()
 
         ##music##
         pygame.mixer.init()

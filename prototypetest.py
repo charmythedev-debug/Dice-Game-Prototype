@@ -15,7 +15,7 @@ window = pygame.display.set_mode((800, 600), pygame.RESIZABLE)
 clock = pygame.time.Clock()
 pygame.display.set_caption('Dice Game Prototype')
 
-running = True
+running = Trued
 
 
 
