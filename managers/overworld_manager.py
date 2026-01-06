@@ -3,6 +3,7 @@ import pygame
 
 class OverworldManager:
     def __init__(self, window, player_sprite, background_sprite):
+        self.is_moving = None
         self.window = window
         self.punkin_sprite = pygame.image.load("img/characters/punkin 1.png").convert_alpha()
         self.player_sprite = pygame.image.load("img/characters/char placeholder 2.png").convert_alpha()
@@ -23,7 +24,7 @@ class OverworldManager:
         ####### todo fix player position x so that the footbox aligns with other hitboxes
         self.player_hitbox = pygame.Rect(self.player_x, self.player_y, self.player_w, self.player_h)
         self.player_footbox = pygame.Rect(self.player_x, self.player_y, self.player_w, self.player_h * .2)
-        self.foot_y = None
+        self.foot_y = 0
 
         # dialogue timer and response
 
@@ -49,11 +50,11 @@ class OverworldManager:
         self.debug_mode = False
 
         ########## house positions #######
-
-        mail_w = 30
-        mail_h = 30
-        house_h = 100
-        house_w = 50
+        #
+        # mail_w = 30
+        # mail_h = 30
+        # house_h = 100
+        # house_w = 50
 
         self.immovable_defs = {
             "house_ul": (0.0785, 0.09, 0.0985, 0.15),  # wider + taller
@@ -173,7 +174,7 @@ class OverworldManager:
         foot_w = int(self.player_w + 4)
         self.player_footbox.update(foot_x, self.foot_y, foot_w, foot_h)
 
-    #### todo fix hitboxes wowza theyre messed up
+    #### todo fix hitboxes wowza they're messed up
     def make_scaled_rect(self, x_r, y_r, w_r, h_r):
         x = int(x_r * self.win_w)
         y = int(y_r * self.win_h)

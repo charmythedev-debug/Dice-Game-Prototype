@@ -15,7 +15,7 @@ window = pygame.display.set_mode((800, 600), pygame.RESIZABLE)
 clock = pygame.time.Clock()
 pygame.display.set_caption('Dice Game Prototype')
 
-running = Trued
+running = True
 
 
 
@@ -34,9 +34,6 @@ while running:
             new_size = event.size
             new_window = pygame.display.set_mode(new_size, pygame.RESIZABLE)
 
-    # mouse_x, mouse_y = pygame.mouse.get_pos()
-    # print(f"Cursor position: ({mouse_x}, {mouse_y})")
-    #if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
         if gm.state == "overworld" and gm.dialogue_active and not gm.punkin_defeated:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if hasattr(gm.overworld, "yes_button") and gm.overworld.yes_button.collidepoint(event.pos):

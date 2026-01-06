@@ -1,3 +1,53 @@
 old/
 ideas.txt
 todos.py
+.venv/
+.idea/
+.gitignore
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.env.local/
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Test / coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+
+# Logs
+*.log
+
+# ===== IDE / Editor =====
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Pygame / Assets (optional) =====
+*.wav
+*.mp3
+*.ogg
+
+# ===== Misc =====
+.cache/
